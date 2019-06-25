@@ -13,7 +13,7 @@
 					<?php 
 					if($mod['content'] == 'home/index')
 					{
-						$this->load->view('content_slider');
+						$this->load->view('pembangunan_slider');
 						$this->load->view('content_top');
 						$data_tmp['home'] = @$home;
 						$data_tmp['home']['content_top'] = @$home['content'];
@@ -91,6 +91,14 @@
 					$this->load->view('widget_right', $data_tmp);
 					?>
 				</div>
+				<?php if ($mod['content'] == 'home/index'): ?>
+					<div class="col-md-6 pt-3">
+						<?php $this->load->view('potensi_slider') ?>
+					</div>
+					<div class="col-md-6 pt-3">
+						<?php $this->load->view('perangkat_slider') ?>
+					</div>
+				<?php endif ?>
 			</div>
 		</div>
 		<hr>

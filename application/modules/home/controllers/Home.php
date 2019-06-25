@@ -6,12 +6,14 @@ class Home extends CI_Controller
 	{
 		parent::__construct();
 		$this->load->model('home_model');
+		$this->load->model('sip_dis_model');
 		$this->load->helper('content');
 		$this->load->library('esg');
 	}
 	public function index()
 	{
 		$this->home_model->home();
+		$this->sip_dis_model->block();
 		$this->load->view('index');
 	}
 

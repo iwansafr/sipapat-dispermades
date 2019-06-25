@@ -6,9 +6,11 @@ if(!empty($home['content_slider']))
   <div id="slider" class="carousel slide" data-ride="carousel">
     <ol class="carousel-indicators">
       <?php
+      $i=0;
       foreach ($home['content_slider'] as $key => $value)
       {
-        echo '<li data-target="#slider" data-slide-to="'.$value['id'].'" ></li>';
+        echo '<li data-target="#slider" data-slide-to="'.$i.'" ></li>';
+        $i++;
       }
       ?>
     </ol>
