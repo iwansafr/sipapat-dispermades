@@ -33,7 +33,7 @@ if(!empty($home['pembangunan_slider']))
 							<div class="panel-body card-body">
 								<div class="row">
 									<div class="col-md-12">
-										<?php if ($data['jenis']==1): ?>
+										<?php if ($data['jenis']=='fisik'): ?>
 											<?php $gambar = [0,40,50,80,100]; ?>
 											<div class="row">
 												<?php foreach ($gambar as $gkey => $gvalue): ?>
@@ -48,7 +48,7 @@ if(!empty($home['pembangunan_slider']))
 																<tbody>
 																	<tr>
 																		<td>
-																			<img src="<?php echo $data['doc_'.$value]; ?>" class="img img-responsive" style="object-fit: cover;width: 100%;height:200px;">
+																			<img src="<?php echo $data['doc_'.$gvalue]; ?>" class="img img-responsive" style="object-fit: cover;width: 100%;height:200px;">
 																		</td>
 																	</tr>
 																</tbody>
