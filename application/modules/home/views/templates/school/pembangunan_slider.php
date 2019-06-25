@@ -107,11 +107,6 @@ if(!empty($home['pembangunan_slider']))
 															<td><?php echo $data['sumber_dana_alt'] ?></td>
 														</tr>
 													<?php endif ?>
-													<tr>
-														<td style="width=50%;">Anggaran</td>
-														<td style="width:2%;">:</td>
-														<td><?php echo $data['anggaran']?></td>
-													</tr>
 													<?php if ($data['jenis'] == 0): ?>
 														<?php 
 														if(!empty($data['peserta']))
