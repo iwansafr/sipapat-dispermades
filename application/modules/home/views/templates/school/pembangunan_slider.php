@@ -35,10 +35,13 @@ if(!empty($home['pembangunan_slider']))
 									<div class="col-md-12">
 										<?php if ($data['jenis']=='fisik'): ?>
 											<?php $gambar = [0,40,50,80,100]; ?>
+											<?php 
+											$col_class = (@$data['sumber_dana_id'] == 4 || @$data['sumber_dana_id'] == 5) ? 'col-md-4' : 'col-md-3';
+											?>
 											<div class="row">
 												<?php foreach ($gambar as $gkey => $gvalue): ?>
 													<?php if (!empty($data['doc_'.$gvalue])): ?>
-														<div class="col-md-4">
+														<div class="<?php echo $col_class ?>">
 															<table class="table table-hover table-striped">
 																<thead>
 																	<tr>
