@@ -39,11 +39,6 @@ if(!empty($home['perangkat_slider']))
 									<div class="col-md-4 col-xs-7 pt-3" style="padding: 0;">
 										<table class="table table-sm table-responsive <?php echo $class ?>">
 											<tr>
-												<td>NIK</td>
-												<td>:</td>
-												<td><?php echo strtoupper($data['nik']); ?></td>
-											</tr>
-											<tr>
 												<td>Nama</td>
 												<td>:</td>
 												<td><?php echo strtoupper($data['nama']); ?></td>
