@@ -99,18 +99,13 @@ if(!empty($home['perangkat_slider']))
 												<td>:</td>
 												<td><?php echo strtoupper($data['pelantik']); ?></td>
 											</tr>
-											<tr>
-												<td><?php echo strtoupper('gaji'); ?></td>
-												<td>:</td>
-												<td><?php echo strtoupper($data['penghasilan']); ?></td>
-											</tr>
 										</table>
 									</div>
 								</div>
 								<div class="row">
 									<div class="col-xs-6 pt-3" style="padding: 0;">
 										<?php 
-										$riwayat_pendidikan = $data['riwayat_pendidikan'];
+										// $riwayat_pendidikan = $data['riwayat_pendidikan'];
 										if (!empty($riwayat_pendidikan))
 										{
 											$riwayat_pendidikan = explode("\n", $riwayat_pendidikan);
@@ -142,7 +137,7 @@ if(!empty($home['perangkat_slider']))
 									</div>
 									<div class="col-xs-6 pt-3" style="padding: 0;">
 										<?php 
-										$riwayat_diklat = $data['riwayat_diklat'];
+										// $riwayat_diklat = $data['riwayat_diklat'];
 										if (!empty($riwayat_diklat))
 										{
 											$riwayat_diklat = explode("\n", $riwayat_diklat);
