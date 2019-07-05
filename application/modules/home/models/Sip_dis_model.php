@@ -68,4 +68,30 @@ class Sip_dis_model extends CI_Model
 		}
 	}
 
+	public function pembangunan()
+	{
+		// $pembangunan_url = $this->esg->get_config('api_pembangunan')['link'];
+		$pembangunan_url = 'http://localhost/sipapat/api/pembangunan?b=1';
+		if(!empty($pembangunan_url))
+		{
+			$pembangunan = file_get_contents($pembangunan_url);
+			if(!empty($pembangunan))
+			{
+				$pembangunan = json_decode($pembangunan,1);
+				$config      = pagination($pembangunan['total'],$pembangunan['limit'],base_url('home/pembangunan'));
+				$pembangunan = ['pembangunan_slider'=>$pembangunan['data'],'total'=>$pembangunan['total'],'url'=>$pembangunan['url']];
+		    $this->pagination->initialize($config);
+		    $pembangunan['pagination'] = $this->pagination->create_links();
+
+				$home = $this->esg->get_esg('home');
+				if(!empty($home))
+				{
+					$home = array_merge($home, $pembangunan);
+				}else{
+					$home = $output;
+				}
+				$this->esg->set_esg('home', $home);
+			}
+		}
+	}
 }
