@@ -102,16 +102,8 @@ class Sip_dis_model extends CI_Model
 			$desa = file_get_contents($tp_url);
 			if(!empty($desa))
 			{
-				$desa   = json_decode($desa,1);
-				$desa['desa_tanpa_perangkat'] = $desa;
-				$home = $this->esg->get_esg('home');
-				if(!empty($home))
-				{
-					$home = array_merge($home, $desa);
-				}else{
-					$home = $output;
-				}
-				$this->esg->set_esg('home', $home);
+				$desa = json_decode($desa,1);
+				$this->esg->set_esg('desa_tanpa_perangkat', $desa);
 			}
 		}	
 	}
