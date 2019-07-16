@@ -18,4 +18,20 @@ class Api_pembangunan extends CI_Controller
 		$this->load->view('index');
 	}
 	
+	public function b1()
+	{
+		$this->load->view('index');
+	}
+	public function b2()
+	{
+		$this->load->view('index');
+	}
+	public function b3()
+	{
+		$this->load->view('index');
+	}
+	public function b4()
+	{
+		$this->load->view('index');
+	}
 }
