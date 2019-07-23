@@ -15,4 +15,8 @@ class Pembangunan extends CI_Controller
 		$this->sip_dis_model->pembangunan();
 		$this->load->view('index');
 	}
+	public function b1()
+	{
+		$this->load->view('index');
+	}
 }

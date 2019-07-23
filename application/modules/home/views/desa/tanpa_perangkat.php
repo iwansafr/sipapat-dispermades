@@ -2,7 +2,7 @@
 
 if(!empty($desa_tanpa_perangkat))
 {
-	echo '<h5>DESA YANG BELUM MENGISI DATA PERANGKAT ('.@intval($desa_tanpa_perangkat['uncomplete']['total']).')</h5>';
+	echo '<h5>DESA YANG DATA PERANGKAT KURANG DARI 5 ('.@intval($desa_tanpa_perangkat['uncomplete']['total']).')</h5>';
 	foreach ($desa_tanpa_perangkat['uncomplete']['data'] as $key => $value) 
 	{
 		?>
@@ -10,7 +10,7 @@ if(!empty($desa_tanpa_perangkat))
 		<?php
 	}
 	echo '<hr>';
-	echo '<h5>DESA YANG SUDAH MENGISI DATA PERANGKAT ('.@intval($desa_tanpa_perangkat['complete']['total']).')</h5>';
+	echo '<h5>DESA YANG SUDAH MENGISI DATA PERANGKAT LEBIH DARI 5 ('.@intval($desa_tanpa_perangkat['complete']['total']).')</h5>';
 	foreach ($desa_tanpa_perangkat['complete']['data'] as $key => $value) 
 	{
 		?>
