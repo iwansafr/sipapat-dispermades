@@ -18,6 +18,7 @@ if(!empty($home['pembangunan_slider']))
       $i = 1;
       foreach ($home['pembangunan_slider'] as $key => $value)
       {
+      	$desa = @$value['desa'];
         $class = ($i == 1) ? 'active' : '';
         ?>
         <div class="carousel-item <?php echo $class ?>">
@@ -192,9 +193,14 @@ if(!empty($home['pembangunan_slider']))
 											{
 												$koordinat = $data['koordinat'];
 												$koordinat = explode(",", $koordinat);
-												$lokasi .= "\nDesa : ".@$desa['nama']."\nKecamatan : ".@$desa['kecamatan'];
-												$lokasi .= "\n".@$koordinat[0]."\n".@$koordinat[1];
+												$lokasi .= "\nDESA : ".@$desa['nama']."\nKECAMATAN : ".@$desa['kecamatan'];
+												if(!empty($koordinat[0]))
+												{
+													$lokasi .= "\n".@$koordinat[0]."\n".@$koordinat[1];
+												}
 												$lokasi = explode("\n", $lokasi);
+												$lokasi = array_filter($lokasi);
+												$lokasi = array_unique($lokasi);
 												?>
 												<h3>lokasi</h3>
 												<table class="table table-striped table-hover table-sm">
@@ -208,11 +214,13 @@ if(!empty($home['pembangunan_slider']))
 															<tr>
 																<?php $j =0; ?>
 																<?php foreach ($lok_val as $lvkey => $lvvalue): ?>
-																	<td <?php echo empty($j) ? 'style="width:50%;"' : ''; ?>><?php echo $lvvalue ?></td>
-																	<?php if ($j==0): ?>
-																		<td style="width:2%;">:</td>
+																	<?php if (!empty($lvvalue)): ?>
+																		<td <?php echo empty($j) ? 'style="width:50%;"' : ''; ?>><?php echo $lvvalue ?></td>
+																		<?php if ($j==0): ?>
+																			<td style="width:2%;">:</td>
+																		<?php endif ?>
+																		<?php $j++; ?>
 																	<?php endif ?>
-																	<?php $j++; ?>
 																<?php endforeach ?>
 															</tr>
 															<?php
