@@ -96,7 +96,12 @@ class Sip_dis_model extends CI_Model
 	}
 	public function tanpa_perangkat()
 	{
+		$get = @intval($_GET['kelompok']);
 		$tp_url = @$this->esg->get_config('api_desa_tanpa_perangkat')['link'];
+		if(!empty($get))
+		{
+			$tp_url .= '?kelompok='.$get;
+		}
 		if(!empty($tp_url))
 		{
 			$desa = file_get_contents($tp_url);
