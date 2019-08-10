@@ -19,7 +19,7 @@ application/cache
 sftp-config.json
 # /.htaccess
 # .htaccess
-# .phpintel
+.phpintel
 application/logs/*
 !application/logs/index.html
 !application/logs/.htaccess
