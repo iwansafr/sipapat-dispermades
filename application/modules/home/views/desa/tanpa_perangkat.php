@@ -2,7 +2,7 @@
 
 if(!empty($desa_tanpa_perangkat))
 {
-	$kelompok_id = ['1'=>'perangkat desa', '2'=>'bpd','3'=>'lpmp','4'=>'pkk','5'=>'karang taruna','6'=>'rt','7'=>'rw','8'=>'kpmd','9'=>'linmas'];
+	$kelompok_id = ['1'=>'perangkat desa', '2'=>'bpd','3'=>'lpmd','4'=>'pkk','5'=>'karang taruna','6'=>'rt','7'=>'rw','8'=>'kpmd','9'=>'linmas'];
 	$kelompok_min = ['1'=>5, '2'=>5,'3'=>5,'4'=>5,'5'=>5,'6'=>3,'7'=>2,'8'=>1,'9'=>5];
 	$title = ['uncomplete'=>'Data Kosong','kurang'=>'Data kurang','complete'=>'Data Cukup'];
 	foreach ($desa_tanpa_perangkat as $key => $value) 
