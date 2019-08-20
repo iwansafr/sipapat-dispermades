@@ -18,30 +18,32 @@ if(!empty($desa_tanpa_perangkat))
 		}
 	}
 	?>
-	<table class="table table-hovered table-striped">
-		<tr>
-			<td>No</td>
-			<td>Desa</td>
-			<?php foreach ($kelompok_id as $key => $value): ?>
-				<td><?php echo $value ?></td>
-			<?php endforeach ?>
-		</tr>
-		<?php
-		$i = 1;
-		foreach ($data as $key => $value) 
-		{
-			?>
+	<div class="table table-responsive">
+		<table class="table table-hovered table-striped">
 			<tr>
-				<td><?php echo $i ?></td>
-				<td><?php echo $value['desa'] ?></td>
-				<?php foreach ($kelompok_id as $dkey => $dvalue): ?>
-					<td><?php echo $value[$dvalue] ?></td>
+				<td>No</td>
+				<td>Desa</td>
+				<?php foreach ($kelompok_id as $key => $value): ?>
+					<td><?php echo $value ?></td>
 				<?php endforeach ?>
 			</tr>
 			<?php
-			$i++;
-		}
-		?>
-	</table>
+			$i = 1;
+			foreach ($data as $key => $value) 
+			{
+				?>
+				<tr>
+					<td><?php echo $i ?></td>
+					<td><?php echo $value['desa'] ?></td>
+					<?php foreach ($kelompok_id as $dkey => $dvalue): ?>
+						<td><?php echo $value[$dvalue] ?></td>
+					<?php endforeach ?>
+				</tr>
+				<?php
+				$i++;
+			}
+			?>
+		</table>
+	</div>
 	<?php
 }
