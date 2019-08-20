@@ -24,4 +24,13 @@ class Desa extends CI_Controller
 		$this->esg->set_esg('navigation',$uri);
 		$this->load->view('index');
 	}
+	public function tanpa_perangkat_table()
+	{
+		$this->home_model->home();
+		$this->sip_dis_model->tanpa_perangkat();
+		$uri['string'] = $this->uri->uri_string();
+		$uri['array'] = ['Desa yang belum mengisi data perangkat','total'];
+		$this->esg->set_esg('navigation',$uri);
+		$this->load->view('index');
+	}
 }
