@@ -15,6 +15,12 @@ class Desa extends CI_Controller
 		$this->home_model->home();
 		$this->load->view('index');
 	}
+
+	public function kep_des()
+	{
+		$this->load->view('index', ['data'=>$this->sip_dis_model->kepala_desa()]);
+	}
+
 	public function tanpa_perangkat()
 	{
 		$this->home_model->home();
