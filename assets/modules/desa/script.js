@@ -1,5 +1,6 @@
 $(document).ready(function(){
 	let load_desa = () => {
+    $('.dataTable').find('tbody').append('<tr id="tr_loading"><td colspan="3" align="center">loading data ...</td></tr>');
     $.ajax({
       url:_URL+'home/desa/ajax_kep_des',
       type:'get',
@@ -9,6 +10,7 @@ $(document).ready(function(){
         if(re.success){
           var data = re.data;
           var table = $('.dataTable').find('tbody');
+          // var id = setInterval(frame,100);
           for(var i = 0, l = data.length; i < l; i++){
             var no = i+1;
             table.append(
@@ -19,6 +21,7 @@ $(document).ready(function(){
               '</tr>'
               );
           }
+          $('#tr_loading').remove();
           $('.dataTable').dataTable();
         }else{
           console.log('mohon maaf data tidak ditemukan');
