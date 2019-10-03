@@ -8,20 +8,17 @@
 		<th>desa</th>
 	</thead>
 	<tbody>
-		<tr>
-			<td>1</td>
-			<td>iwan</td>
-			<td>tulakan</td>
-		</tr>
-		<tr>
-			<td>1</td>
-			<td>lina</td>
-			<td>tulakan</td>
-		</tr>
-		<tr>
-			<td>1</td>
-			<td>zea</td>
-			<td>tulakan</td>
-		</tr>
+		<?php 
+		for($i=0;$i<10000;$i++)
+		{
+			?>
+			<tr>
+				<td>1</td>
+				<td>iwan</td>
+				<td>tulakan</td>
+			</tr>
+			<?php
+		}
+		?>
 	</tbody>
 </table>
