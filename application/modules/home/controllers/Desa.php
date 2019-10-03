@@ -18,7 +18,19 @@ class Desa extends CI_Controller
 
 	public function kep_des()
 	{
-		$this->load->view('index', ['data'=>$this->sip_dis_model->kepala_desa()]);
+		$data = [];
+		$this->home_model->home();
+		$this->esg->add_css(base_url().'templates/school/vendor/datatables/dataTables.bootstrap4.min.css');
+		$this->esg->add_js(
+			[
+				base_url().'templates/school/vendor/datatables/jquery.dataTables.min.js',
+				base_url().'templates/school/vendor/datatables/dataTables.bootstrap4.min.js',
+				base_url().'templates/school/vendor/datatables/datatables-demo.js'
+			]);
+		// $this->esg->add_js(base_url().'templates/school/vendor/datatables/datatables-demo.js');
+		// $this->esg->add_js(base_url().'templates/school/vendor/datatables/jquery.dataTables.min.js');
+		// $data = $this->sip_dis_model->kepala_desa();
+		$this->load->view('index', ['data'=>$data]);
 	}
 
 	public function tanpa_perangkat()

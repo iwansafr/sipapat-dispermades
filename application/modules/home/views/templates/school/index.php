@@ -103,5 +103,13 @@
 		</div>
 		<hr>
 		<?php $this->load->view('footer'); ?>
+		<?php 
+		$this->esg->extra_js();
+		?>
+		<script>
+			$(document).ready( function () {
+			    $('.dataTable').DataTable();
+			} );
+		</script>
 	</body>
 </html>

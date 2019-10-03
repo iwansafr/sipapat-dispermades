@@ -6,6 +6,9 @@
 <link rel="stylesheet" type="text/css" href="<?php echo $link_template;?>/assets/css/style.css">
 
 
+<?php 
+$this->esg->extra_css();
+?>
 
 
 <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
