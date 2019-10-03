@@ -17,7 +17,9 @@ $(document).ready(function(){
               '<tr>'+
                 '<td>'+no+'</td>'+
                 '<td>'+data[i]['nama']+'</td>'+
+                '<td>'+data[i]['kelamin']+'</td>'+
                 '<td>'+data[i]['desa']+'</td>'+
+                '<td>'+data[i]['kecamatan']+'</td>'+
               '</tr>'
               );
           }
