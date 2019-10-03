@@ -20,6 +20,8 @@ $(document).ready(function(){
               );
           }
           $('.dataTable').dataTable();
+        }else{
+          console.log('mohon maaf data tidak ditemukan');
         }
       }
     });
