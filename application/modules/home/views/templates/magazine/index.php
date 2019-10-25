@@ -44,6 +44,9 @@
 								<div class="col-md-6">
 									<?php $this->load->view('potensi_slider') ?>
 								</div>
+								<div class="col-md-6">
+									<?php $this->load->view('bumdes_slider') ?>
+								</div>
 							<?php else: ?>
 								<div class="col_full bottommargin-lg clearfix">
 									<?php $this->load->view($mod['content']);?>

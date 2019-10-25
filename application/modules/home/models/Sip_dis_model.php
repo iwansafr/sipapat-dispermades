@@ -15,6 +15,7 @@ class Sip_dis_model extends CI_Model
 		$potensi_url = $this->esg->get_config('api_potensi')['link'];
 		$perangkat_url = $this->esg->get_config('api_perangkat')['link'];
 		$pembangunan_url = $this->esg->get_config('api_pembangunan')['link'];
+		$bumdes_url = $this->esg->get_config('api_bumdes')['link'];
 		if(!empty($potensi_url))
 		{
 			$potensi = file_get_contents($potensi_url);
@@ -60,6 +61,23 @@ class Sip_dis_model extends CI_Model
 				if(!empty($home))
 				{
 					$home = array_merge($home, $pembangunan);
+				}else{
+					$home = @$output;
+				}
+				$this->esg->set_esg('home', $home);
+			}
+		}
+		if(!empty($bumdes_url))
+		{
+			$bumdes = file_get_contents($bumdes_url);
+			if(!empty($bumdes))
+			{
+				$bumdes = json_decode($bumdes,1);
+				$bumdes = ['bumdes_slider'=>$bumdes];
+				$home = $this->esg->get_esg('home');
+				if(!empty($home))
+				{
+					$home = array_merge($home, $bumdes);
 				}else{
 					$home = @$output;
 				}
