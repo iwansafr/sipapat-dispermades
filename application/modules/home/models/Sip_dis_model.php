@@ -27,7 +27,7 @@ class Sip_dis_model extends CI_Model
 				{
 					$home = array_merge($home, $potensi);
 				}else{
-					$home = $output;
+					$home = @$output;
 				}
 				$this->esg->set_esg('home', $home);
 			}
@@ -44,7 +44,7 @@ class Sip_dis_model extends CI_Model
 				{
 					$home = array_merge($home, $perangkat);
 				}else{
-					$home = $output;
+					$home = @$output;
 				}
 				$this->esg->set_esg('home', $home);
 			}
@@ -61,7 +61,7 @@ class Sip_dis_model extends CI_Model
 				{
 					$home = array_merge($home, $pembangunan);
 				}else{
-					$home = $output;
+					$home = @$output;
 				}
 				$this->esg->set_esg('home', $home);
 			}
