@@ -151,4 +151,25 @@ class Sip_dis_model extends CI_Model
 			}
 		}	
 	}
+
+	public function bumdes()
+	{
+		$get = @intval($_GET['page']);
+		$tp_url = @$this->esg->get_config('api_bumdes_all')['link'];
+		if(!empty($get))
+		{
+			$tp_url .= '?page='.$get;
+		}else{
+			$tp_url .= '?page=1';
+		}
+		if(!empty($tp_url))
+		{
+			$data = file_get_contents($tp_url);
+			if(!empty($data))
+			{
+				$data = json_decode($data,1);
+				return $data;
+			}
+		}	
+	}
 }
