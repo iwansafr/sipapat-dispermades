@@ -32,11 +32,13 @@
 		</header>
 		<section id="content">
 			<div class="content-wrap">
-				<div class="section header-stick bottommargin-lg clearfix" style="padding: 20px 0;">
-					<div>
-						<?php $this->load->view('content_news') ?>
+				<?php if ($mod['content'] == 'home/index'): ?>
+					<div class="section header-stick bottommargin-lg clearfix" style="padding: 20px 0;">
+						<div>
+							<?php $this->load->view('content_news') ?>
+						</div>
 					</div>
-				</div>
+				<?php endif ?>
 				<div class="container clearfix">
 					<div class="row">
 						<div class="col-md-12 bottommargin">
