@@ -20,7 +20,7 @@
 				<div id="logo">
 					<?php $this->load->view('logo') ?>
 				</div>
-				<div class="top-advert">
+				<div class="top-advert" style="width: 75%;">
 					<?php $this->load->view('content_top_banner') ?>					
 				</div>
 			</div>
