@@ -4,7 +4,7 @@ if(!empty($content))
 	ob_start();
 	?>
 	<div class="row">
-		<div class="col">
+		<div class="col-md-12">
 			<p>
 				<?php
 				if(!empty($content['cat']))
@@ -71,7 +71,7 @@ if(!empty($content))
 	echo $content['content'];
 	?>
 	<div class="row">
-		<div class="col">
+		<div class="col-md-12">
 			<p>
 				<?php
 				if(!empty($content['tag']))
@@ -88,13 +88,13 @@ if(!empty($content))
 		</div>
 	</div>
 	<div class="row">
-		<div class="col">
+		<div class="col-sm-6">
 			<p>
 				<i class="fa fa-user"></i>
 				<span class="font-italic" style="font-family: 'Crete Round', serif;font-size: 14px;">author : <?php echo $content['author']; ?></span>
 			</p>
 		</div>
-		<div class="col">
+		<div class="col-sm-6">
 			<p class="pull-right">
 				<i class="fa fa-calendar"></i>
 				<span class="font-italic" style="font-family: 'Crete Round', serif;font-size: 14px;">created : <?php echo content_date($content['created']); ?></span>
@@ -108,9 +108,9 @@ if(!empty($content))
 	?>
 
 	<div class="row">
-		<div class="col">
+		<div class="col-md-6">
 		</div>
-		<div class="col no-left text-right">
+		<div class="col-md-6 no-left text-right">
 			<div class="btn-group">
 				<a class="btn btn-light btn-sm" id="icon_pdf" target="_blank" href="<?php echo base_url('home/content/clear_detail/'.$content['slug'].'.html') ?>">
 					<i class="fa fa-file-pdf-o" title="Konversi ke pdf"></i>
