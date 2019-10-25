@@ -39,63 +39,16 @@
 				</div>
 				<div class="container clearfix">
 					<div class="row">
-						<div class="col-md-8 bottommargin">
+						<div class="col-md-12 bottommargin">
 							<?php if ($mod['content'] == 'home/index'): ?>
-								<div class="col_full bottommargin-lg">
-									<?php $this->load->view('content_slider') ?>
-								</div>
-								<div class="clear"></div>
-								<div class="col_full bottommargin-lg clearfix">
-									<?php $this->load->view('content_block',['number'=>'1']) ?>
-								</div>
-
-								<div class="bottommargin-lg">
-									<?php $this->load->view('content_banner') ?>
-								</div>
-
-								<div class="col_full bottommargin-lg clearfix">
-									<?php $this->load->view('content_block', ['number'=>'2']) ?>
-								</div>
-
-								<?php $this->load->view('content_gallery') ?>
-
-								<div class="col_full nobottommargin clearfix">
-									<?php $this->load->view('content_grid') ?>
+								<div class="col-md-6">
+									<?php $this->load->view('potensi_slider') ?>
 								</div>
 							<?php else: ?>
 								<div class="col_full bottommargin-lg clearfix">
 									<?php $this->load->view($mod['content']);?>
 								</div>
 							<?php endif ?>
-						</div>
-
-						<div class="col-md-4">
-
-							<div class="line hidden-lg hidden-md"></div>
-
-							<div class="sidebar-widgets-wrap clearfix">
-								<div class="widget clearfix">
-									<?php $this->load->view('content_advertisement') ?>									
-								</div>
-
-								<div class="widget widget_links clearfix">
-									<?php $this->load->view('category') ?>
-								</div>
-
-								<div class="widget clearfix">
-									<?php $this->load->view('twitter') ?>
-								</div>
-
-								<div class="widget clearfix">
-
-									<div class="tabs nobottommargin clearfix" id="sidebar-tabs">
-										<?php $this->load->view('content_double') ?>
-									</div>
-								</div>
-								<div class="widget clearfix">
-									<?php $this->load->view('content_banner_right') ?>
-								</div>
-							</div>
 						</div>
 					</div>
 				</div>

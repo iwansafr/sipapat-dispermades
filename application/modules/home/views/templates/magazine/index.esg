@@ -35,46 +35,22 @@
 	{content_news}
 </div>
 <div class="col-md-12">
-	<div class="col-md-8">
-		<div class="col-md-12">
-			{content_slider}
-		</div>
-		<div class="col-md-12">
-			{content_block_1}
-		</div>
-		<div class="col-md-12">
-			{content_banner}
-		</div>
-		<div class="col-md-12">
-			{content_block_2}
-		</div>
-		<div class="col-md-12">
-			{content_gallery}
-		</div>
-		<div class="col-md-12">
-			{content_grid}
-		</div>
-	</div>
-	<div class="col-md-4">
-		<div class="col-md-12">
-			{content_advertisement}
-		</div>
-		<div class="col-md-12">
-			{category}
-		</div>
-		<div class="col-md-12">
-			{twitter_widget}
-		</div>
-		<div class="col-md-12">
-			<div class="col-md-6">
-				{content_popular}
-			</div>
-			<div class="col-md-6">
-				{content_latest}
+	<div class="row">
+		<div class="col-md-6">
+			<div class="panel-group">
+				<a href="#admin/api_potensi#" target="_blank" rel="noopener noreferrer" class="btn btn-default pull-right" style="position: absolute;"><i class="fa fa-pencil-alt"></i></a>
+				<div class="panel panel-default default text-center">
+					<h5>Potensi Slider</h5>
+				</div>
 			</div>
 		</div>
-		<div class="col-md-12">
-			{content_banner_right}
+		<div class="col-md-6">
+			<div class="panel-group">
+				<a href="#admin/api_bumdes#" target="_blank" rel="noopener noreferrer" class="btn btn-default pull-right" style="position: absolute;"><i class="fa fa-pencil-alt"></i></a>
+				<div class="panel panel-default default text-center">
+					<h5>Bumdes Slider</h5>
+				</div>
+			</div>
 		</div>
 	</div>
 </div>
