@@ -6,7 +6,8 @@
 				<?php 
 				foreach ($home['potensi_slider'] as $key => $value): ?>
 					<?php $data = $value;?>
-					<div class="slide" data-thumb="<?php echo $data['doc'] ?>">
+					<!-- <div class="slide" data-thumb="<?php echo $data['doc'] ?>"> -->
+					<div class="slide" data-thumb="">
 						<a href="#">
 							<?php
 		        	if(!empty($data))
