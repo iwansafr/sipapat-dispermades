@@ -80,7 +80,7 @@
 										<a href="#"><h3><?php echo $data['item'] ?></h3></a>
 									</div>
 									<div class="text-overlay-meta">
-										<span><?php echo @$data['category'] ?></span>
+										<span><?php echo @$data['desa']['nama'] ?></span>
 									</div>
 								</div>
 							</div>
