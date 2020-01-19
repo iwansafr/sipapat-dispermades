@@ -103,4 +103,14 @@ class Desa extends CI_Controller
 		$this->esg->set_esg('navigation',$uri);
 		$this->load->view('index');
 	}
+
+	public function tanpa_potensi()
+	{
+		$this->home_model->home();
+		$this->sip_dis_model->tanpa_potensi();
+		$uri['string'] = $this->uri->uri_string();
+		$uri['array'] = ['Desa yang belum mengisi data potensi','total'];
+		$this->esg->set_esg('navigation',$uri);
+		$this->load->view('index');
+	}
 }

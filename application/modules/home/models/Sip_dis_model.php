@@ -131,6 +131,25 @@ class Sip_dis_model extends CI_Model
 		}	
 	}
 
+	public function tanpa_potensi()
+	{
+		$get = @intval($_GET['kategori']);
+		$tp_url = @$this->esg->get_config('api_desa_tanpa_potensi')['link'];
+		if(!empty($get))
+		{
+			$tp_url .= '?kategori='.$get;
+		}
+		if(!empty($tp_url))
+		{
+			$desa = file_get_contents($tp_url);
+			if(!empty($desa))
+			{
+				$desa = json_decode($desa,1);
+				$this->esg->set_esg('desa_tanpa_potensi', $desa);
+			}
+		}	
+	}
+
 	public function kepala_desa()
 	{
 		$get = @intval($_GET['page']);
