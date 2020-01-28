@@ -28,7 +28,7 @@ class Esg_model extends CI_Model
 		if(empty($data) || !is_array($data))
 		{
 			$data = array(
-						'title' => 'esoftgreat',
+						'title' => 'dispermades',
 						'keyword' => 'software development',
 						'description' => 'software development and it consultant',
 						'developer' => 'esoftgreat',
