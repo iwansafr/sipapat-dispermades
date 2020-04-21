@@ -48,9 +48,9 @@
 
 		</div>
 		<div class="row">
-			<div class="col-md-12">
-				<h5 class="headin5_amrc col_white_amrc pt2">Total Pengunjung</h5>
-				<p class="mb10"><?php echo $total_visitor ?></p>
+			<div class="col-md-3">
+				<h5 style="border-bottom: 3px solid #e64946;" class="headin5_amrc col_white_amrc pt2">Total Pengunjung</h5>
+				<h6 class="col_white_amrc"><?php echo $total_visitor ?> orang</h6>
 			</div>
 		</div>
 	</div>
