@@ -47,6 +47,12 @@
 			?>
 
 		</div>
+		<div class="row">
+			<div class="col-md-12">
+				<h5 class="headin5_amrc col_white_amrc pt2">Total Pengunjung</h5>
+				<p class="mb10"><?php echo $total_visitor ?></p>
+			</div>
+		</div>
 	</div>
 	<div class="container">
 		<ul class="foote_bottom_ul_amrc">

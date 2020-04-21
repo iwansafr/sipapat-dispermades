@@ -16,6 +16,11 @@ class Sip_dis_model extends CI_Model
 		$perangkat_url = @$this->esg->get_config('api_perangkat')['link'];
 		$pembangunan_url = @$this->esg->get_config('api_pembangunan')['link'];
 		$bumdes_url = @$this->esg->get_config('api_bumdes')['link'];
+		$total_visitor = @$this->db->query('SELECT id FROM visitor')->num_rows();
+		if(!empty($total_visitor))
+		{
+			$this->esg->set_esg('total_visitor',$total_visitor);
+		}
 		if(!empty($potensi_url))
 		{
 			$potensi = file_get_contents($potensi_url);
