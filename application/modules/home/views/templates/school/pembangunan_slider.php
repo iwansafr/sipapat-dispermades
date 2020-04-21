@@ -237,7 +237,7 @@ if(!empty($home['pembangunan_slider']))
 								</div>
 							</div>
 							<div class="panel-footer card-footer" style="text-align: right;">
-								<a style="font-size: 9px;" href="https://www.dinsua.co.id">dinusa</a>
+								<a style="font-size: 9px;" href="https://www.mandesa.co.id">mandesa</a>
 							</div>
 						</div>
 						<?php

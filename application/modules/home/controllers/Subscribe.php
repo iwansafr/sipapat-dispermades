@@ -7,6 +7,7 @@ class Subscribe extends CI_Controller
 		parent::__construct();
 		$this->load->model('home_model');
 		$this->load->model('subscribe_model');
+		$this->load->model('sip_dis_model');
 		$this->load->helper('content');
 		$this->load->library('esg');
 	}

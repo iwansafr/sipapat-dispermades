@@ -8,19 +8,24 @@ class Sip_dis_model extends CI_Model
 		$this->load->library('esg');
 		$this->load->library('ZEA/zea');
 		$this->load->model('esg_model');
+		$this->total_visitor();
 	}
 	
+	public function total_visitor()
+	{
+		$total_visitor = @$this->db->query('SELECT id FROM visitor')->num_rows();
+		if(!empty($total_visitor))
+		{
+			$this->esg->set_esg('total_visitor',$total_visitor);
+		}
+	}
+
 	public function block()
 	{
 		$potensi_url = @$this->esg->get_config('api_potensi')['link'];
 		$perangkat_url = @$this->esg->get_config('api_perangkat')['link'];
 		$pembangunan_url = @$this->esg->get_config('api_pembangunan')['link'];
 		$bumdes_url = @$this->esg->get_config('api_bumdes')['link'];
-		$total_visitor = @$this->db->query('SELECT id FROM visitor')->num_rows();
-		if(!empty($total_visitor))
-		{
-			$this->esg->set_esg('total_visitor',$total_visitor);
-		}
 		if(!empty($potensi_url))
 		{
 			$potensi = file_get_contents($potensi_url);

@@ -8,6 +8,7 @@ class Content extends CI_Controller
 		$this->db->cache_off();
 		$this->load->model('home_model');
 		$this->load->model('content_model');
+		$this->load->model('sip_dis_model');
 		$this->load->helper('content');
 		$this->load->library('esg');
 	}
