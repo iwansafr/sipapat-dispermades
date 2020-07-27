@@ -18,6 +18,7 @@
 	</div>
 </div>
 <div class="col-md-12">
+	{content_news}
 	<div class="col-md-8">
 		<div class="panel-group">
 			<a href="#admin/api_pembangunan#" target="_blank" rel="noopener noreferrer" class="btn btn-default pull-right" style="position: absolute;"><i class="fa fa-pencil-alt"></i></a>

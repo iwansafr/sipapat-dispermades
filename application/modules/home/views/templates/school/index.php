@@ -8,6 +8,11 @@
 			<?php $this->load->view('menu_top') ?>
 			<div class="clearfix"></div>
 			<hr>
+			<?php if ($mod['content'] =='home/index'): ?>
+				<div class="row">
+					<?php $this->load->view('content_news') ?>
+				</div>
+			<?php endif ?>
 			<div class="row pt-5">
 				<div class="col-lg-9">
 					<?php 
